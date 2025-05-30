@@ -1,0 +1,1 @@
+En nuestra aplicación se lanzará un dado 5 veces y mostrará los resultados como "Lanzamiento {número de lanzamiento} número obtenido {resultado lanzamiento}" con una espera de 5 segundos entre lanzamientos
