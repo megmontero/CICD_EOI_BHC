@@ -34,10 +34,9 @@ pipeline{
           steps{
             script{
                 try{
-                     sh 'docker run --name $project $registryDockerHub'
-
+                    sh "docker run --name ${project} ${registryDockerHub}"
                 }finally{
-                    sh 'docker rm $project'
+                    sh "docker rm ${project}"
                 }
             }
           }  
