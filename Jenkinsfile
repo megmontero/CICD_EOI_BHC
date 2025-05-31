@@ -7,7 +7,7 @@ pipeline{
         projectVersion = "1.0"
         repositoryGit = "https://github.com/BHC317/CICD_EOI.git"
         repositoryGitCredentials = "github"
-        sonarCredentials = credentials('sonar')
+        sonarCredentials = credentials('sonarqube')
     }
     stages{
         stage('Clean workspace'){
