@@ -7,7 +7,6 @@ pipeline{
         projectVersion = "1.0"
         repositoryGit = "https://github.com/BHC317/CICD_EOI.git"
         repositoryGitCredentials = "github"
-        sonarCredentials = credentials('sonarqube')
     }
     stages{
         stage('Clean workspace'){
@@ -31,7 +30,7 @@ pipeline{
             steps{
                 script{
                     withSonarQubeEnv('Sonar'){
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.login=$sonarCredentials -Dsonar.projectKey=$project -Dsonar.projectName=$project -Dsonar.projectVersion=$projectVersion -Dsonar.sources=./" 
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=$project -Dsonar.projectName=$project -Dsonar.projectVersion=$projectVersion -Dsonar.sources=./" 
                     }
                 }
             }
