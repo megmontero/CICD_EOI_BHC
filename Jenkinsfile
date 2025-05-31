@@ -15,7 +15,7 @@ pipeline{
             }
         }
         stage('Checkout code'){
-           step{
+           steps{
             script{
                 git branch: 'main',
                     credentialsId: repositoryGitCredentials,
